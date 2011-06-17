@@ -1,7 +1,13 @@
+# oh-my-zsh configuration:
+export ZSH=$HOME/.oh-my-zsh
+export ZSH_THEME="robbyrussell"
+plugins=(rails ruby git)
+source $ZSH/oh-my-zsh.sh
+
+# My zsh configuration:
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 export PATH=/usr/local/ruby187pl329patched/bin:$PATH
-
 export DISPLAY=:0.0
 export INPUTRC=~/.inputrc
 
@@ -71,3 +77,4 @@ setopt IGNORE_EOF
 
 # beeps are annoying
 setopt NO_BEEP
+
