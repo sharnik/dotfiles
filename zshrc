@@ -18,10 +18,20 @@ alias grep='grep --color=auto'
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset — %s%Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
 alias gs='git status'
 alias ggraph='git log --graph --decorate --oneline'
+# Generates ctags file in . for project in directory specified as the argument
+generate_ctags(){
+  if [[ -z $1 ]]; then
+    source_dir='.'
+  else
+    source_dir=$1
+  fi
+  find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
+}
 
 # XING aliases
 alias xe='cd ~/projects/xing/xing-rails && eval `bin/xing_env`'
 alias solr_test="RAILS_ENV=test rake solr:start"
+
 
 # Autoloading 'rubygems'
 RUBYOPT="rubygems"
