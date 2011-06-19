@@ -1,0 +1,9 @@
+# Additional file types
+--type-set=haml=.haml
+
+# Search options
+--smart-case
+
+# Output
+--color
+--group
