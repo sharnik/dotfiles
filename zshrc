@@ -29,7 +29,7 @@ generate_ctags(){
 }
 
 # XING aliases
-alias xe='cd ~/projects/xing/xing-rails && eval `bin/xing_env`'
+alias xe='cd ~/projects/xing/xing-rails; eval `~/projects/xing/xing-rails/bin/xing_env`'
 alias solr_test="RAILS_ENV=test rake solr:start"
 
 # Autoloading 'rubygems'
