@@ -15,9 +15,13 @@ alias mysql=/usr/local/mysql/bin/mysql
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
+alias g='git'
+# Autocomplete for 'g' as well
+complete -o default -o nospace -F _git g
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset — %s%Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
 alias gs='git status'
 alias ggraph='git log --graph --decorate --oneline'
+
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
   if [[ -z $1 ]]; then
@@ -39,7 +43,6 @@ export RUBYOPT
 # RVM stuff:
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Share history between multiple shells
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
