@@ -16,8 +16,6 @@ alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
 alias g='git'
-# Autocomplete for 'g' as well
-complete -o default -o nospace -F _git g
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset — %s%Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
 alias gs='git status'
 alias ggraph='git log --graph --decorate --oneline'
