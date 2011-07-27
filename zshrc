@@ -1,7 +1,7 @@
 # oh-my-zsh configuration:
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
-plugins=(rails ruby git)
+plugins=(rails ruby git bundler)
 source $ZSH/oh-my-zsh.sh
 
 # My zsh configuration:
