@@ -17,11 +17,10 @@
 [alias]
 	co = checkout
 	put = push origin HEAD
-	pr = pull --rebase
+	pr = pull --rebase --prune
 	track = !git-track
 	thanks = !git-thanks
 	workdir = !git-new-workdir
-	up = !git pull --rebase && git push
 	ignored = "!git ls-files --others --exclude-standard"
 	nb = checkout -b
 	pending = !git --no-pager log origin/master..master && echo
