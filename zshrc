@@ -53,25 +53,13 @@ setopt EXTENDED_HISTORY
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
-
-export LANG=en_US.UTF-8
-
-# why would you type 'cd dir' if you could just type 'dir'?
-setopt AUTO_CD
-
-# Spell check commands!  (Sometimes annoying)
-setopt CORRECT
-
-# 10 second wait if you do something that will delete everything.  I wish I'd had this before...
-setopt RM_STAR_WAIT
-
-# use magic (this is default, but it can't hurt!)
-setopt ZLE
-
-export EDITOR="vi"
+setopt AUTO_CD # type 'dir' instead of 'cd dir'
+setopt CORRECT # spellcheck commands
+setopt RM_STAR_WAIT #wait 10 second before executing rm *
+export EDITOR="vim"
 export PAGER=less
 setopt IGNORE_EOF
+setopt NO_BEEP # remove beeps
 
-# beeps are annoying
-setopt NO_BEEP
-
+export REPORTTIME=10 # reports time of long-running commands
+export LANG=en_US.UTF-8
