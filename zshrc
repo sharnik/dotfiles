@@ -30,10 +30,6 @@ generate_ctags(){
   find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
 }
 
-# Autoloading 'rubygems'
-RUBYOPT="rubygems"
-export RUBYOPT
-
 # RVM stuff:
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
