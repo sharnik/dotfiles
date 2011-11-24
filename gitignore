@@ -1,3 +1,7 @@
 .rvmrc
+.powrc
+.DS_Store
 tmp
 log
+TAGS
+vendor
