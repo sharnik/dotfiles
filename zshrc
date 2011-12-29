@@ -4,19 +4,6 @@ export ZSH_THEME="robbyrussell"
 plugins=(rails ruby git bundler)
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
-export PATH=/usr/local/ruby187pl329patched/bin:$PATH
-export DISPLAY=:0.0
-export INPUTRC=~/.inputrc
-
-# Fixes MySQL configuration:
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
-export MAGICK_HOME="/usr/local/lib/ImageMagick-6.7.3"
-export PATH="$MAGICK_HOME/bin:$PATH"
-export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/:$DYLD_LIBRARY_PATH"
-
 alias mysql=/usr/local/mysql/bin/mysql
 alias ls='ls -FG'
 alias ll='ls -lFG'
@@ -34,9 +21,6 @@ generate_ctags(){
   fi
   find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
 }
-
-# RVM stuff:
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
