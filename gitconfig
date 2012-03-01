@@ -44,8 +44,10 @@
 	autosetupmerge = true
 	autosetuprebase = always
 [merge]
-	tool = vimdiff
-	stat = true
+tool = threesome
+[mergetool "threesome"]
+cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+trustExitCode = true
 [advice]
 	pushNonFastForward = false
 	statusHints = false
