@@ -1,5 +1,6 @@
 # Additional file types
 --type-set=haml=.haml
+--type-set=scss=.scss
 
 # Search options
 --smart-case
