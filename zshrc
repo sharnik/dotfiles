@@ -4,6 +4,8 @@ export ZSH_THEME="robbyrussell"
 plugins=(rails ruby git bundler)
 source $ZSH/oh-my-zsh.sh
 
+PATH=$PATH:$HOME/bin
+
 alias mysql=/usr/local/mysql/bin/mysql
 alias ls='ls -FG'
 alias ll='ls -lFG'
