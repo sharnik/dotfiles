@@ -8,3 +8,6 @@
 # Output
 --color
 --group
+
+# Ignore javascript i18n for CRA app
+--ignore-dir=app/assets/javascripts/i18n
