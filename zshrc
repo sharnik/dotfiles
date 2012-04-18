@@ -13,6 +13,7 @@ alias grep='grep --color=auto'
 alias g='git'
 alias gl='git lg'
 alias gs='git status'
+alias crap='cap'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
