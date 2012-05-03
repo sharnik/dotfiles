@@ -13,6 +13,7 @@ alias grep='grep --color=auto'
 alias g='git'
 alias gl='git lg'
 alias gs='git status -sb'
+alias gd='git diff --word-diff'
 alias gshow='git show --word-diff'
 alias crap='cap'
 
