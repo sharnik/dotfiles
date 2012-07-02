@@ -23,15 +23,21 @@
     resolve = !git ls-files --unmerged | cut -c51- | sort -u | xargs git add
     unstage = reset HEAD
     subadd = !sh -c 'git submodule add $(git config -f"$0".git/config remote.origin.url) "$0"'
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset' --abbrev-commit --date=relative
-    ld = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --color-words -i -p
+	lg = log --graph --pretty=format:'%C(yellow)%d%Creset %s %Cgreen(%h, %an, %cr)%Creset' --abbrev-commit --date=relative
     dw = diff --word-diff
     ba = branch -a
 [color]
     ui = auto
-    diff = auto
-    status = auto
     branch = auto
+[color "status"]
+    added = blue
+    changed = yellow
+    untracked = white
+[color "diff"]
+    meta = white
+    frag = magenta
+    old = red
+    new = green
 [mirror]
     summary = true
 [branch]
