@@ -42,7 +42,6 @@
     summary = true
 [branch]
     autosetupmerge = true
-    autosetuprebase = always
 [merge]
     tool = splice
 [mergetool "splice"]
