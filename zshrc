@@ -27,6 +27,12 @@ generate_ctags(){
   find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
 }
 
+# Properly recognises gems for current rvm ruby
+mvim()
+{
+  (unset GEM_PATH GEM_HOME; command mvim "$@")
+}
+
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
