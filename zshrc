@@ -33,6 +33,8 @@ mvim()
   (unset GEM_PATH GEM_HOME; command mvim "$@")
 }
 
+unsetopt correct_all
+
 setopt SHARE_HISTORY
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_DUPS
@@ -46,7 +48,6 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt AUTO_CD # type 'dir' instead of 'cd dir'
-setopt CORRECT # spellcheck commands
 setopt RM_STAR_WAIT #wait 10 second before executing rm *
 export EDITOR="vim"
 export PAGER=less
