@@ -27,6 +27,16 @@ generate_ctags(){
   find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
 }
 
+# make vim a pager
+function vless() {
+ local less_path=`find $(vim --version | awk ' /fall-back/ { gsub(/\"/,"",$NF); print $NF }'  )/ -name less.sh`
+ if [[ -z $less_path ]]; then
+   echo 'less.sh not found'
+   exit 1
+ fi
+ $less_path $*
+}   
+
 # Properly recognises gems for current rvm ruby
 mvim()
 {
