@@ -7,7 +7,6 @@
 
 # Ignore stuff:
 --ignore-dir=tmp
---ignore-dir=app/assets/javascripts/i18n # i18n js files for CRA app
 
 # Output
 --color
