@@ -1,6 +1,8 @@
 # Additional file types
 --type-set=haml=.haml
 --type-set=scss=.scss
+--type-set=rabl=.rabl
+--type-set=jbuilder=.jbuilder
 
 # Search options
 --smart-case
