@@ -42,6 +42,7 @@
     summary = true
 [branch]
     autosetupmerge = true
+    autosetuprebase = remote
 [merge]
     tool = splice
 [mergetool "splice"]
