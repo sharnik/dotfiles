@@ -6,7 +6,6 @@ source $ZSH/oh-my-zsh.sh
 
 PATH=$PATH:$HOME/bin
 
-alias mysql=/usr/local/mysql/bin/mysql
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
@@ -35,7 +34,7 @@ function vless() {
    exit 1
  fi
  $less_path $*
-}   
+}
 
 # Properly recognises gems for current rvm ruby
 mvim()
