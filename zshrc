@@ -14,7 +14,7 @@ alias gl='git lg'
 alias gs='git status -sb'
 alias gd='git diff --word-diff'
 alias gshow='git show --word-diff'
-alias crap='cap'
+alias ssh_tunnel='ssh -D 8080 -f -C -q -N'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
