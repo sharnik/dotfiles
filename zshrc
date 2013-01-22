@@ -36,12 +36,6 @@ function vless() {
  $less_path $*
 }
 
-# Properly recognises gems for current rvm ruby
-mvim()
-{
-  (unset GEM_PATH GEM_HOME; command mvim "$@")
-}
-
 unsetopt correct_all
 
 setopt SHARE_HISTORY
@@ -66,7 +60,6 @@ setopt NO_BEEP # remove beeps
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 
-# RVM
 [[ -s "/Users/sharnik/.rvm/scripts/rvm" ]] && source "/Users/sharnik/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin
 
