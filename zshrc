@@ -12,7 +12,7 @@ alias grep='grep --color=auto'
 alias g='git'
 alias gl='git lg'
 alias gs='git status -sb'
-alias gd='git diff --word-diff'
+alias gd='git d'
 alias gshow='git show --word-diff'
 alias ssh_tunnel='ssh -D 8080 -f -C -q -N'
 

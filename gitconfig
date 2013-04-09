@@ -23,7 +23,7 @@
     resolve = !git ls-files --unmerged | cut -c51- | sort -u | xargs git add
     unstage = reset HEAD
     lg = log --graph --pretty=format:'%C(yellow)%d%Creset %s %Cgreen(%h, %an, %cr)%Creset' --abbrev-commit --date=relative
-    dw = diff --word-diff
+    d = diff --word-diff --color-words
     ba = branch -a
     wip = commit -am 'WIP'
     assume   = update-index --assume-unchanged
@@ -57,5 +57,6 @@
 [diff]
     renames = copies
     mnemonicprefix = true
+    algorithm = patience
 [rerere]
     enabled = true
