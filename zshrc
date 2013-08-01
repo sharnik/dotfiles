@@ -65,3 +65,6 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Fixes MySQL for pow.cx:
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
