@@ -9,6 +9,7 @@ PATH=$PATH:$HOME/bin
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
+alias v='vim'
 alias g='git'
 alias gl='git ls'
 alias gs='git status -sb'
