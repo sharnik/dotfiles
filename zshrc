@@ -61,9 +61,6 @@ setopt NO_BEEP # remove beeps
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 
-[[ -s "/Users/sharnik/.rvm/scripts/rvm" ]] && source "/Users/sharnik/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin
-
 # Fixes MySQL for pow.cx:
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
