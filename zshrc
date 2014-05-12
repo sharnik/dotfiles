@@ -19,6 +19,7 @@ alias gc='git commit -v'
 alias gca='git commit -av'
 alias gcaa='git add . && git commit -av'
 alias ssh_tunnel='ssh -D 8080 -f -C -q -N'
+alias d='docker'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
@@ -64,9 +65,9 @@ setopt NO_BEEP # remove beeps
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 
-# Fixes MySQL for pow.cx:
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
+
+export DOCKER_HOST=tcp://localhost:4243
+
