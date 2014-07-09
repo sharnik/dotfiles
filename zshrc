@@ -5,6 +5,7 @@ plugins=(rails ruby git bundler zsh-syntax-highlighting wd)
 source $ZSH/oh-my-zsh.sh
 
 PATH=$PATH:$HOME/bin
+PATH=/usr/local/bin:$PATH # make /usr/local bin preced /usr/bin
 
 alias ls='ls -FG'
 alias ll='ls -lFG'
