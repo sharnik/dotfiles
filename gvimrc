@@ -1,4 +1,3 @@
-" Removes toolbar
-set guioptions-=T
+set guioptions-=T "Removes toolbar
 
-set guifont=Monaco:h12
+set guifont=Monaco
