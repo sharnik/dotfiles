@@ -4,8 +4,9 @@ export ZSH_THEME="robbyrussell"
 plugins=(rails ruby git bundler zsh-syntax-highlighting wd)
 source $ZSH/oh-my-zsh.sh
 
-PATH=$PATH:$HOME/bin
-PATH=/usr/local/bin:$PATH # make /usr/local bin preced /usr/bin
+export PATH="$PATH:$HOME/bin"
+export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 alias ls='ls -FG'
 alias ll='ls -lFG'
@@ -13,14 +14,13 @@ alias grep='grep --color=auto'
 alias v='vim'
 alias g='git'
 alias gl='git ls'
-alias gs='git status -sb'
+alias gst='git status -sb'
 alias gd='git d'
 alias gshow='git show --word-diff'
 alias gc='git commit -v'
 alias gca='git commit -av'
 alias gcaa='git add . && git commit -av'
 alias ssh_tunnel='ssh -D 8080 -f -C -q -N'
-alias d='docker'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
@@ -70,5 +70,5 @@ export LANG=en_US.UTF-8
 export PATH="/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
-export DOCKER_HOST=tcp://localhost:4243
+export TERM=xterm-256color
 
