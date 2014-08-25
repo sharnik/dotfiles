@@ -71,5 +71,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 export TERM=xterm-256color
+export DOCKER_HOST=tcp://:2375 # boot2docker port
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
