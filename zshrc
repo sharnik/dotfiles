@@ -72,3 +72,4 @@ export NODE_PATH="/usr/local/lib/node_modules"
 
 export TERM=xterm-256color
 
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
