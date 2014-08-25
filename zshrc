@@ -65,12 +65,13 @@ setopt NO_BEEP # remove beeps
 
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
+export TERM=xterm-256color
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export DOCKER_HOST=tcp://:2375 # boot2docker port
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
-export TERM=xterm-256color
-export DOCKER_HOST=tcp://:2375 # boot2docker port
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
