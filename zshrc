@@ -79,3 +79,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
+
+# fasd
+eval "$(fasd --init auto)"
+
