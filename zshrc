@@ -20,7 +20,7 @@ alias gshow='git show --word-diff'
 alias gc='git commit -v'
 alias gca='git commit -av'
 alias gcaa='git add . && git commit -av'
-alias ssh_tunnel='ssh -D 8080 -f -C -q -N'
+alias tmk='tmux kill-session -t'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
