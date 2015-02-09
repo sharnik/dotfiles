@@ -8,6 +8,17 @@ export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+export REPORTTIME=10 # reports time of long-running commands
+export LANG=en_US.UTF-8
+export TERM=xterm-256color
+export EDITOR=vim
+export PAGER=less
+#export DOCKER_HOST=tcp://:2375 # boot2docker port
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules"
+
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
@@ -61,22 +72,8 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 setopt AUTO_CD # type 'dir' instead of 'cd dir'
-setopt RM_STAR_WAIT #wait 10 second before executing rm *
-export EDITOR="vim"
-export PAGER=less
 setopt IGNORE_EOF
 setopt NO_BEEP # remove beeps
-
-export REPORTTIME=10 # reports time of long-running commands
-export LANG=en_US.UTF-8
-export TERM=xterm-256color
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export DOCKER_HOST=tcp://:2375 # boot2docker port
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export NODE_PATH="/usr/local/lib/node_modules"
-
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
 
