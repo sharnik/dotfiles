@@ -32,6 +32,7 @@ alias gc='git commit -v'
 alias gca='git commit -av'
 alias gcaa='git add . && git commit -av'
 alias tmk='tmux kill-session -t'
+alias j='fasd_cd -d'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
