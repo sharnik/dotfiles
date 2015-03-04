@@ -27,6 +27,7 @@
     lf = log --decorate -u
     d = diff --word-diff --color-words
     ba = branch -a
+    bd = branch -D
     wip = commit -am 'WIP'
     assume   = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
