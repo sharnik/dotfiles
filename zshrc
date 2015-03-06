@@ -77,6 +77,7 @@ setopt AUTO_CD # type 'dir' instead of 'cd dir'
 setopt IGNORE_EOF
 setopt NO_BEEP # remove beeps
 
+# Homebrew
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
 
 # fasd
