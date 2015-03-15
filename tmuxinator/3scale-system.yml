@@ -1,6 +1,0 @@
-name: 3scale-system
-root: ~/code/system
-windows:
-  - editor: vim
-  - vagrant: vagrant up && vagrant ssh
-

@@ -1,5 +1,0 @@
-name: 3scale-backend
-root: ~/code/backend
-windows:
-  - editor: vim
-  - vagrant: vagrant up && vagrant ssh

@@ -1,0 +1,5 @@
+name: Elmodoro
+root: ~/code/brains-and-beards/elmodoro
+windows:
+  - editor: vim
+  - reactor: elm-reactor

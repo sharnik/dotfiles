@@ -1,6 +1,0 @@
-name: 3scale-cubert
-root: ~/code/cubert
-windows:
-  - editor: vim
-  - shell:
-
