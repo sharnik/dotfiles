@@ -34,6 +34,7 @@ alias gcaa='git add . && git commit -av'
 alias tmk='tmux kill-session -t'
 alias j='fasd_cd -d'
 alias x='exit'
+alias spoof-nsa='sudo spoof set 00:20:91:34:56:78 en0'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
