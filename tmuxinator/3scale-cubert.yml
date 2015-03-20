@@ -1,0 +1,5 @@
+name: Cubert
+root: ~/code/cubert
+windows:
+  - editor: vim
+  - bash: make bash
