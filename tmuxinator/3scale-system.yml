@@ -1,0 +1,6 @@
+name: system
+root: ~/code/system
+windows:
+  - editor: vim
+  - bash: make bash
+
