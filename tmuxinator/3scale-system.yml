@@ -1,6 +1,7 @@
 name: system
 root: ~/code/system
 windows:
+  - zeus: zeus start
   - editor: vim
-  - bash: make bash
+  - bash:
 
