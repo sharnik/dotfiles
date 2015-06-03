@@ -2,6 +2,8 @@ name: system
 root: ~/code/system
 windows:
   - zeus: zeus start
+  - server: zeus server
+  - console: zeus console
   - editor: vim
   - bash:
 
