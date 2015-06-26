@@ -1,6 +1,7 @@
-name: Cubert
-root: ~/code/cubert
+name: Backend
+root: ~/code/backend
 windows:
   - editor: vim
   - container: make bash
   - bash:
+
