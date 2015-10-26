@@ -6,14 +6,15 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+export PATH="$PATH:$HOME/Applications/gradle-2.8/bin"
 
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export EDITOR=vim
 export PAGER=less
-#export DOCKER_HOST=tcp://:2375 # boot2docker port
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
