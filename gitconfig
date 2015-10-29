@@ -33,6 +33,7 @@
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
     pf = push --force-with-lease
+    rh = reset --hard
 [color]
     ui = auto
     branch = auto
