@@ -13,7 +13,7 @@ export PATH="$PATH:$HOME/Applications/gradle-2.8/bin"
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 
 ### Added by the Heroku Toolbelt
@@ -23,7 +23,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
-alias v='vim'
+alias v='nvim'
 alias g='git'
 alias gl='git ls'
 alias gst='git status -sb'
@@ -49,9 +49,9 @@ generate_ctags(){
   find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
 }
 
-# make vim a pager
+# make nvim a pager
 function vless() {
- local less_path=`find $(vim --version | awk ' /fall-back/ { gsub(/\"/,"",$NF); print $NF }'  )/ -name less.sh`
+ local less_path=`find $(nvim --version | awk ' /fall-back/ { gsub(/\"/,"",$NF); print $NF }'  )/ -name less.sh`
  if [[ -z $less_path ]]; then
    echo 'less.sh not found'
    exit 1
