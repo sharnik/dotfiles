@@ -1,6 +1,0 @@
-name: Cubert
-root: ~/code/cubert
-windows:
-  - editor: vim
-  - container: make bash
-  - bash:

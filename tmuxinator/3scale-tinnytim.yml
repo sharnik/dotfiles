@@ -1,6 +1,0 @@
-name: Tinnytim
-root: ~/code/tinnytim-ruby
-windows:
-  - editor: vim
-  - bash: make bash
-
