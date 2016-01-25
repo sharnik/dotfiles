@@ -7,7 +7,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/bin"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
 export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="$PATH:$HOME/Applications/gradle-2.8/bin"
 
 export REPORTTIME=10 # reports time of long-running commands
