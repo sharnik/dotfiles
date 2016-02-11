@@ -93,3 +93,5 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
