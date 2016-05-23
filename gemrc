@@ -1,10 +1,11 @@
 ---
 :backtrace: false
-:benchmark: false
 :bulk_threshold: 1000
 :sources:
 - http://gems.rubyforge.org/
+- http://gems.xing.com
 :update_sources: true
 :verbose: true
-install: --no-ri --no-rdoc --env-shebang
-update: --no-ri --no-rdoc --env-shebang
+benchmark: false
+install: "--no-ri --no-rdoc --env-shebang"
+update: "--no-ri --no-rdoc --env-shebang"
