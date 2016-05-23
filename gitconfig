@@ -65,9 +65,4 @@
     algorithm = patience
 [rerere]
     enabled = true
-[transfer]
-    fsckobjects = true
-[fetch]
-    fsckobjects = true
-[receive]
-    fsckObjects = true
+
