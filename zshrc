@@ -60,6 +60,15 @@ function vless() {
  $less_path $*
 }
 
+# Notifies when a terminal command finishes in the background
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(fc -ln -1)
+  # No point in waiting for the command to complete
+  notifyme "$CMD" "$LAST_EXIT_CODE" &
+}
+export PS1='$(f_notifyme)'$PS1
+
 # Easy en/decryption in command line using openssl
 encrypt () { openssl des3 -in $1 -out $1.encrypted }
 decrypt () { FILENAME=$(echo $1|sed -e 's/\.encrypted$//g'); openssl des3 -d -in $1 -out $FILENAME }
