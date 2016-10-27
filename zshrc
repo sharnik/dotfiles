@@ -4,7 +4,7 @@ export ZSH_THEME="robbyrussell"
 plugins=(rails ruby git bundler zsh-syntax-highlighting wd)
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/Applications"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
@@ -105,7 +105,7 @@ fi
 
 # Android SDK paths for React Native
 export ANDROID_HOME=~/Library/Android/sdk
-export ANDROID_NDK=~/bin/android/android-ndk-r10e
+export ANDROID_NDK=~/Applications/android/android-ndk-r10e
 export PATH=${PATH}:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 
 export PATH="$HOME/.yarn/bin:$PATH"
