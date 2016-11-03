@@ -102,4 +102,3 @@ export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_NDK=~/Applications/android/android-ndk-r10e
 export PATH=${PATH}:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 
-export PATH="$HOME/.yarn/bin:$PATH"
