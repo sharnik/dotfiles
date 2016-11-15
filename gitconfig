@@ -52,7 +52,7 @@
     autosetupmerge = true
     autosetuprebase = remote
 [merge]
-    tool = splice
+	tool = p4mergetool
 [mergetool "splice"]
     cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
@@ -64,5 +64,12 @@
     mnemonicprefix = true
     algorithm = patience
 [rerere]
-    enabled = true
+	enabled = false
 
+[mergetool]
+	keepTemporaries = false
+	prompt = false
+	keepBackup = false
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
