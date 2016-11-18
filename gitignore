@@ -8,3 +8,6 @@ log
 TAGS
 .bundle
 .vagrant
+
+# VS Code editor stuff
+typings/
