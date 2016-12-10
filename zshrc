@@ -18,7 +18,10 @@ export PAGER=less
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
+export PATH="$PATH:$(yarn global bin)"
 
 alias ls='ls -FG'
 alias ll='ls -lFG'
