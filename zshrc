@@ -44,6 +44,13 @@ alias j='fasd_cd -d'
 alias x='exit'
 alias spoof-nsa='sudo spoof set 00:20:91:34:56:78 en0'
 alias yt='cclive --filename-format=%t.mp4'
+alias cat='bat'
+alias ping='prettyping'
+alias httpstat='httpstat.py'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop" # alias top and fix high sierra bug
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias help='tldr'
 
 # Generates ctags file in . for project in directory specified as the argument
 generate_ctags(){
