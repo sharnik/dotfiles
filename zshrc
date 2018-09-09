@@ -24,6 +24,8 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 export PATH="$PATH:$(yarn global bin)"
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 alias ls='ls -FG'
 alias ll='ls -lFG'
@@ -44,6 +46,8 @@ alias j='fasd_cd -d'
 alias x='exit'
 alias spoof-nsa='sudo spoof set 00:20:91:34:56:78 en0'
 alias yt='cclive --filename-format=%t.mp4'
+alias octave='/usr/local/octave/3.8.0/bin/octave-3.8.0'
+alias android-emulator='/Users/sharnik/Library/Android/sdk/tools/emulator -avd '
 alias cat='bat'
 alias ping='prettyping'
 alias httpstat='httpstat.py'
@@ -114,3 +118,16 @@ export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_NDK=~/Applications/android/android-ndk-r10e
 export PATH=${PATH}:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/sharnik/Code/brains-and-beards/APIMocker/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/sharnik/Code/brains-and-beards/APIMocker/node_modules/tabtab/.completions/electron-forge.zsh
+
+# OPAM configuration
+. /Users/sharnik/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+#Visual Studio Code
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
