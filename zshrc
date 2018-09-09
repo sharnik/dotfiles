@@ -21,6 +21,8 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 export PATH="$PATH:$(yarn global bin)"
 
 alias ls='ls -FG'
