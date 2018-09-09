@@ -13,7 +13,7 @@ export PATH="$PATH:$HOME/Applications/gradle-2.8/bin"
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
-export EDITOR=nvim
+export EDITOR=vim
 export PAGER=less
 
 ### Added by the Heroku Toolbelt
@@ -26,7 +26,7 @@ export PATH="$PATH:$(yarn global bin)"
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
-alias v='nvim'
+alias v='vim'
 alias g='git'
 alias gl='git ls'
 alias gst='git status -sb'
