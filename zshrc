@@ -21,8 +21,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+eval `fnm env`
 export PATH="$PATH:$(yarn global bin)"
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
