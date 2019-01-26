@@ -56,26 +56,6 @@ alias top="sudo htop" # alias top and fix high sierra bug
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias help='tldr'
 
-# Generates ctags file in . for project in directory specified as the argument
-generate_ctags(){
-  if [[ -z $1 ]]; then
-    source_dir='.'
-  else
-    source_dir=$1
-  fi
-  find $source_dir -iname "*.rb" | grep -v db | xargs ctags -a -f TAGS
-}
-
-# make nvim a pager
-function vless() {
- local less_path=`find $(nvim --version | awk ' /fall-back/ { gsub(/\"/,"",$NF); print $NF }'  )/ -name less.sh`
- if [[ -z $less_path ]]; then
-   echo 'less.sh not found'
-   exit 1
- fi
- $less_path $*
-}
-
 # Notifies when a terminal command finishes in the background
 function f_notifyme {
   LAST_EXIT_CODE=$?
