@@ -1,7 +1,7 @@
 # oh-my-zsh configuration:
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
-plugins=(rails ruby git bundler zsh-syntax-highlighting wd)
+plugins=(git bundler zsh-syntax-highlighting wd)
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:$HOME/Applications"
