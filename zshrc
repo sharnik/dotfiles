@@ -108,7 +108,9 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 . /Users/sharnik/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 #Visual Studio Code
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
+# Flutter SDK
+export PATH=$PATH:~/Applications/flutter/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
