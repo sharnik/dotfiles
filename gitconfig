@@ -13,6 +13,9 @@
     whitespace = nowarn
 [alias]
     co = checkout
+    c = commit -v
+    ca = commit -av
+    caa = "git add . && git commit -av"
     pr = pull --rebase --prune
     ignored = "!git ls-files --others --exclude-standard"
     nb = checkout -b
@@ -25,6 +28,7 @@
     ls = log --graph --pretty=format:'%C(yellow)%d%Creset %s %Cgreen(%h, %an, %cr)%Creset' --abbrev-commit --date=relative
     ll = log --decorate --numstat
     lf = log --decorate -u
+    l = ls
     d = diff --word-diff --color-words
     ba = branch -a
     bd = branch -D
@@ -38,6 +42,8 @@
     rc = rebase --continue
     ri = rebase --interactive
     rh = reset --hard
+    s = status -sb
+    show = show --word-diff
 [color]
     ui = auto
     branch = auto
