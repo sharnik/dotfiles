@@ -1,8 +1,9 @@
 # oh-my-zsh configuration:
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
-plugins=(git bundler zsh-syntax-highlighting wd)
+plugins=(git wd)
 source $ZSH/oh-my-zsh.sh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$PATH:$HOME/Applications"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
