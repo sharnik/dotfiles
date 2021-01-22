@@ -8,16 +8,12 @@ export PATH="$PATH:$HOME/Applications"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-export PATH="$PATH:$HOME/Applications/gradle-2.8/bin"
 
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
 export EDITOR=vim
 export PAGER=less
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
@@ -57,7 +53,8 @@ function f_notifyme {
   # No point in waiting for the command to complete
   notifyme "$CMD" "$LAST_EXIT_CODE" &
 }
-export PS1='$(f_notifyme)'$PS1
+# Temporarily disable notifications from CLI
+# export PS1='$(f_notifyme)'$PS1
 
 # Easy en/decryption in command line using openssl
 encrypt () { openssl des3 -in $1 -out $1.encrypted }
