@@ -2,7 +2,7 @@
     name = Wojciech Ogrodowczyk
     email = wojciech@brainsandbeards.com
 [core]
-    editor = vim
+	editor = oni2 --nofork --quiet
     autocrlf = input
     safecrlf = false
     excludesfile = ~/.gitignore
