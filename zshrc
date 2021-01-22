@@ -1,7 +1,6 @@
 # oh-my-zsh configuration:
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
-plugins=(git wd)
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -27,6 +26,7 @@ export PATH="$PATH:$(yarn global bin)"
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
+alias g='git'
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias grep='grep --color=auto'
