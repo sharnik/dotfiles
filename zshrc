@@ -43,7 +43,7 @@ alias ping='prettyping'
 alias httpstat='httpstat.py'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="sudo htop" # alias top and fix high sierra bug
-alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias du="dust"
 alias help='tldr'
 
 # Notifies when a terminal command finishes in the background
