@@ -15,6 +15,8 @@ export TERM=xterm-256color
 export EDITOR=vim
 export PAGER=less
 
+source ~/Code/open-source/dotfiles/secret-vars
+
 # JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
 eval `fnm env`
