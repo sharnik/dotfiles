@@ -13,9 +13,9 @@
     whitespace = nowarn
 [alias]
     co = checkout
-    c = commit -v
-    ca = commit -av
-    caa = "git add . && git commit -av"
+    c = commit -v --no-verify
+    ca = commit -av --no-verify
+    caa = "git add . && git commit -av --no-verify"
     pr = pull --rebase --prune
     ignored = "!git ls-files --others --exclude-standard"
     nb = checkout -b
