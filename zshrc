@@ -11,6 +11,9 @@ export PATH="$PATH:$HOME/Applications"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 export REPORTTIME=10 # reports time of long-running commands
 export LANG=en_US.UTF-8
