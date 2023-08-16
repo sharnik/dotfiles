@@ -3,7 +3,7 @@
     email = wojciech@brainsandbeards.com
 	signingkey = 8275B11674F1D39C
 [core]
-	editor = oni2 --nofork --quiet
+	editor = code --wait
     autocrlf = input
     safecrlf = false
     excludesfile = ~/.gitignore
@@ -63,7 +63,10 @@
     autosetupmerge = true
     autosetuprebase = remote
 [merge]
-	tool = p4mergetool
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+    trustExitCode = true
 [mergetool "splice"]
     cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
@@ -74,6 +77,9 @@
     renames = copies
     mnemonicprefix = true
     algorithm = patience
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTEd
 [pager]
     diff = diff-so-fancy | less --tabs=1,5 -RFX
     show = diff-so-fancy | less --tabs=1,5 -RFX
@@ -83,8 +89,5 @@
 	keepTemporaries = false
 	prompt = false
 	keepBackup = false
-[mergetool "p4mergetool"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
-	trustExitCode = false
 [init]
 	defaultBranch = main
