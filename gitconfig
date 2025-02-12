@@ -3,7 +3,7 @@
     email = wojciech@brainsandbeards.com
 	signingkey = 8275B11674F1D39C
 [core]
-	editor = code --wait
+	editor = zed --wait
     autocrlf = input
     safecrlf = false
     excludesfile = ~/.gitignore
