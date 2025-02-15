@@ -1,0 +1,6 @@
+[user]
+name = "Wojciech Ogrodowczyk"
+email = "wojciech@brainsandbeards.com"
+
+[template-aliases]
+'format_short_id(id)' = 'id.shortest()'
