@@ -111,3 +111,6 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/
 export PATH=$PATH:~/Applications/flutter/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# jj autocompletion
+source <(jj util completion zsh)
