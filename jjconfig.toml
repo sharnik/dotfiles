@@ -4,3 +4,23 @@ email = "wojciech@brainsandbeards.com"
 
 [template-aliases]
 'format_short_id(id)' = 'id.shortest()'
+
+# https://github.com/jj-vcs/jj/discussions/4690#discussioncomment-12388965
+[[--scope]]
+--when.commands = ["diff"]
+
+[--scope.ui]
+# https://github.com/jj-vcs/jj/blob/v0.25.0/docs/config.md#processing-contents-to-be-paged
+pager = "delta"
+# NOTE: this is required when using `delta` as a pager
+diff.format = "git"
+
+[[--scope]]
+--when.commands = ["show"]
+
+[--scope.ui]
+pager = "delta"
+diff.format = "git"
+
+[aliases]
+open = ["log", "-r", "heads(mine()) ~ ::trunk()"]
