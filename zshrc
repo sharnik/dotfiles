@@ -5,12 +5,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="$PATH:$HOME/Applications"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -25,7 +22,6 @@ source ~/Code/open-source/dotfiles/secret-vars
 
 # JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
-eval `fnm env`
 export PATH="$PATH:$(yarn global bin)"
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
@@ -86,29 +82,12 @@ setopt AUTO_CD # type 'dir' instead of 'cd dir'
 setopt IGNORE_EOF
 setopt NO_BEEP # remove beeps
 
-# Homebrew
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # autojump
-
-# fasd
-eval "$(fasd --init auto)"
-
 # Android SDK paths for React Native
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /Users/sharnik/Code/brains-and-beards/APIMocker/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/sharnik/Code/brains-and-beards/APIMocker/node_modules/tabtab/.completions/electron-forge.zsh
-
-# OPAM configuration
-. /Users/sharnik/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
 #Visual Studio Code
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
-
-# Flutter SDK
-export PATH=$PATH:~/Applications/flutter/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
