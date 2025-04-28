@@ -22,7 +22,7 @@ source ~/Code/open-source/dotfiles/secret-vars
 
 # JS stuff
 export NODE_PATH="/usr/local/lib/node_modules"
-export PATH="$PATH:$(yarn global bin)"
+
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
@@ -49,6 +49,7 @@ alias help='tldr'
 
 alias l='eza -G  --color auto --icons -a -s type'
 alias ll='eza -l --color always --icons -a -s type'
+
 # Notifies when a terminal command finishes in the background
 function f_notifyme {
   LAST_EXIT_CODE=$?
@@ -57,6 +58,7 @@ function f_notifyme {
   notifyme "$CMD" "$LAST_EXIT_CODE" &
 }
 export PS1='$(f_notifyme)'$PS1
+
 setopt PROMPT_SUBST
 _my_theme_vcs_info() {
   jj_prompt_template 'self.change_id().shortest(3) ++ " " ++ description.first_line()' \
