@@ -3,7 +3,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # oh-my-zsh configuration:
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 plugins=(jj)
 
@@ -57,8 +56,7 @@ function f_notifyme {
   # No point in waiting for the command to complete
   notifyme "$CMD" "$LAST_EXIT_CODE" &
 }
-# Temporarily disable notifications from CLI
-# export PS1='$(f_notifyme)'$PS1
+export PS1='$(f_notifyme)'$PS1
 setopt PROMPT_SUBST
 _my_theme_vcs_info() {
   jj_prompt_template 'self.change_id().shortest(3) ++ " " ++ description.first_line()' \
@@ -106,3 +104,4 @@ fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
 eval "$(zoxide init --cmd j zsh)"
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
