@@ -28,8 +28,6 @@ export PATH="$PATH:$(yarn global bin)"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 alias g='git'
-alias ls='ls -FG'
-alias ll='ls -lFG'
 alias grep='grep --color=auto'
 alias v='vim'
 alias vim='nvim'
@@ -37,7 +35,6 @@ alias m='mux'
 alias t='tmux'
 alias tx='tmuxinator'
 alias tmk='tmux kill-session -t'
-alias j='fasd_cd -d'
 alias x='exit'
 alias spoof-nsa='sudo spoof set 00:20:91:34:56:78 en0'
 alias yt='yt-dlp -o "%(title)s.%(ext)s" -S "res:1080,ext,codec"'
@@ -51,6 +48,8 @@ alias top="sudo htop" # alias top and fix high sierra bug
 alias du="dust"
 alias help='tldr'
 
+alias l='eza -G  --color auto --icons -a -s type'
+alias ll='eza -l --color always --icons -a -s type'
 # Notifies when a terminal command finishes in the background
 function f_notifyme {
   LAST_EXIT_CODE=$?
@@ -96,7 +95,7 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 #Visual Studio Code
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # jj autocompletion
 source <(jj util completion zsh)
@@ -106,3 +105,4 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
+eval "$(zoxide init --cmd j zsh)"
