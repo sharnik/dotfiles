@@ -5,6 +5,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
+plugins=(jj)
 
 export PATH="$PATH:$HOME/Applications"
 export PATH="/usr/local/bin:$PATH" # make /usr/local/bin preced /usr/bin
@@ -59,6 +60,12 @@ function f_notifyme {
 }
 # Temporarily disable notifications from CLI
 # export PS1='$(f_notifyme)'$PS1
+setopt PROMPT_SUBST
+_my_theme_vcs_info() {
+  jj_prompt_template 'self.change_id().shortest(3) ++ " " ++ description.first_line()' \
+  || git_prompt_info
+}
+export PROMPT='$(_my_theme_vcs_info) ❯ '
 
 # Easy en/decryption in command line using openssl
 encrypt () { openssl des3 -in $1 -out $1.encrypted }
