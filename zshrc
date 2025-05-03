@@ -114,3 +114,9 @@ export PATH=$PATH:~/Applications/flutter/bin
 
 # jj autocompletion
 source <(jj util completion zsh)
+
+# ASDF (versioning system tools per project, used for Ruby)
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+autoload -Uz compinit && compinit
+
