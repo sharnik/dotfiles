@@ -59,13 +59,6 @@ function f_notifyme {
 }
 export PS1='$(f_notifyme)'$PS1
 
-setopt PROMPT_SUBST
-_my_theme_vcs_info() {
-  jj_prompt_template 'self.change_id().shortest(3) ++ " " ++ description.first_line()' \
-  || git_prompt_info
-}
-export PROMPT='$(_my_theme_vcs_info) ❯ '
-
 # Easy en/decryption in command line using openssl
 encrypt () { openssl des3 -in $1 -out $1.encrypted }
 decrypt () { FILENAME=$(echo $1|sed -e 's/\.encrypted$//g'); openssl des3 -d -in $1 -out $FILENAME }
@@ -117,3 +110,10 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+setopt PROMPT_SUBST
+_my_theme_vcs_info() {
+  jj log --no-graph -r @ --ignore-working-copy -T 'self.change_id().shortest(3) ++ " " ++ description.first_line()' \
+  || git_prompt_info
+}
+export PROMPT='$(_my_theme_vcs_info) ❯ '
