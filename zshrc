@@ -26,6 +26,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 alias g='git'
+alias j='jj'
 alias grep='grep --color=auto'
 alias v='vim'
 alias vim='nvim'
@@ -97,7 +98,7 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 autoload -Uz compinit && compinit
 
-eval "$(zoxide init --cmd j zsh)"
+eval "$(zoxide init --cmd z zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Allow switching directories using `yazi`
