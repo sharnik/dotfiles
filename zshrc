@@ -111,9 +111,11 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-setopt PROMPT_SUBST
+# setopt PROMPT_SUBST
 _my_theme_vcs_info() {
   jj log --no-graph -r @ --ignore-working-copy -T 'self.change_id().shortest(3) ++ " " ++ description.first_line()' \
   || git_prompt_info
 }
-export PROMPT='$(_my_theme_vcs_info) ❯ '
+# export PROMPT='$(_my_theme_vcs_info) ❯ '
+
+eval "$(starship init zsh)"
