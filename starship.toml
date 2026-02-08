@@ -14,3 +14,14 @@ disabled = true
 
 [git_state]
 disabled = true
+
+[git_status]
+disabled = true
+
+[git_branch]
+disabled = true
+
+[custom.jj]
+when = "jj-starship detect"
+shell = ["jj-starship"]
+format = "$output "
