@@ -45,6 +45,12 @@
     rh = reset --hard
     s = status -sb
     show = show --word-diff
+[branch]
+    autosetupmerge = true
+    autosetuprebase = remote
+    sort = -committerdate
+[column]
+    ui = auto
 [color]
     ui = auto
     branch = auto
@@ -57,13 +63,25 @@
     frag = magenta
     old = red
     new = green
+[commit]
+    verbose = true
+[diff]
+    renames = true
+    mnemonicprefix = true
+    algorithm = histogram
+    tool = vscode
+    colorMoved = true
+[feature]
+    experimental = true
+[grep]
+    patternType = perl
+[init]
+	defaultBranch = main
 [mirror]
     summary = true
-[branch]
-    autosetupmerge = true
-    autosetuprebase = remote
 [merge]
     tool = vscode
+    conflictstyle = zdiff3
 [mergetool "vscode"]
     cmd = code --wait $MERGED
     trustExitCode = true
@@ -73,21 +91,20 @@
 [advice]
     pushNonFastForward = false
     statusHints = false
-[diff]
-    renames = copies
-    mnemonicprefix = true
-    algorithm = patience
-    tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTEd
 [pager]
     diff = diff-so-fancy | less --tabs=1,5 -RFX
     show = diff-so-fancy | less --tabs=1,5 -RFX
+[rebase]
+    autosquash = true
+    autostash = true
 [rerere]
-	enabled = false
+    enabled = true
+    autoupdate = true
+[tag]
+    sort = version:refname
 [mergetool]
 	keepTemporaries = false
 	prompt = false
 	keepBackup = false
-[init]
-	defaultBranch = main
