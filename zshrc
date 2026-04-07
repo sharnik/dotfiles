@@ -93,11 +93,6 @@ source <(fzf --zsh)
 # jj autocompletion
 source <(jj util completion zsh)
 
-# ASDF (versioning system tools per project, used for Ruby)
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
-autoload -Uz compinit && compinit
-
 eval "$(zoxide init --cmd z zsh)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -119,3 +114,4 @@ _my_theme_vcs_info() {
 # export PROMPT='$(_my_theme_vcs_info) ❯ '
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
