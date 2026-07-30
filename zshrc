@@ -130,4 +130,4 @@ _my_theme_vcs_info() {
 # export PROMPT='$(_my_theme_vcs_info) ❯ '
 
 eval "$(starship init zsh)"
-eval "$(mise activate zsh)"
+eval "$(/Users/sharnik/.local/bin/mise activate zsh)"
